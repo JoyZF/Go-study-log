@@ -12,4 +12,5 @@ require (
 	google.golang.org/genproto v0.0.0-20210427215850-f767ed18ee4d // indirect
 	google.golang.org/grpc v1.37.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	nhooyr.io/websocket v1.8.7 // indirect
 )
