@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"sync"
 	"unsafe"
 )
 
@@ -14,13 +15,13 @@ func StringToByte(key *string) []byte {
 }
 
 func main() {
-	decryptContent := "/AvYEjm4g6xJ3LVrk2/Adk"
-	iv := decryptContent[0:16]
-	key := decryptContent[2:18]
-	fmt.Println(iv)
-	fmt.Println(key)
-	ivBytes := StringToByte(&iv)
-	keyBytes := StringToByte(&key)
-	fmt.Println(string(ivBytes))
-	fmt.Println(string(keyBytes))
+	wg := sync.WaitGroup{}
+	wg.Add(5)
+	for i := 0; i < 5; i++ {
+		go func() {
+			defer wg.Done()
+			fmt.Println(i)
+		}()
+	}
+	wg.Wait()
 }
