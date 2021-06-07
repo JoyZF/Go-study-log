@@ -42,7 +42,7 @@ func main() {
 	fmt.Printf("%d \n", (*reflect.StringHeader)(unsafe.Pointer(&ss)).Data)
 	fmt.Printf("%d \n", (*reflect.StringHeader)(unsafe.Pointer(&ss1)).Data)
 	fmt.Printf("%d \n", (*reflect.StringHeader)(unsafe.Pointer(&ss2)).Data)
-	//在Go中字符串都是只读的 为了节省内存，相同字面量的字符串通常对应于同一字符串敞亮，因此指向同一个底层数组。
+	//在Go中字符串都是只读的 为了节省内存，相同字面量的字符串通常对应于同一字符串常量，因此指向同一个底层数组。
 
 	//SliceHeader StringHeader 可以利用其实现零拷贝的string到bytes的转换
 }
