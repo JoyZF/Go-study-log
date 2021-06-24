@@ -1,4 +1,4 @@
-# Less Is More
+##  Less Is More
 ## 不支持三元
 其他语言中：
 ```
@@ -17,7 +17,7 @@ return false_value
 
 目的为了防止三元的滥用：
 比如说
-- 嵌套三元
+- 嵌套三元 if (cand?cond ? true : false?true:false)
 
 ## 廉价的goroutine
 在Java中开一个线程需要实现Thread ，重写run方法，调用start方法来启动 或者 通过Runnable接口创建线程类。
@@ -45,6 +45,11 @@ example:
 type Animal struct {
  name string
 }
+
+type Animal struct {
+ name string
+}
+
 
 func NewAnimal() *Animal {
  return &Animal{}
