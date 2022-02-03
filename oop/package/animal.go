@@ -11,6 +11,7 @@ type Animal struct {
 }
 
 type Cat struct {
+	// 继承
 	Animal
 	FeatureA string
 }
@@ -25,6 +26,7 @@ func NewAnimal() *Animal  {
 }
 
 func (p *Animal) SetName(name string)  {
+	// 封装
 	p.name = name
 }
 
