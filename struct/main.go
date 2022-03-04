@@ -18,7 +18,7 @@ func (s *MyStruct) SetName2(name string)  {
 }
 
 func main()  {
-	//内存分配在栈 在Go编译器的代码优化阶段，会对其进行优化，直接返回false 并不是真正去比较了 可以通过 go run -gcflags="-N -l" main.go 不让他优化
+	//内存分配在栈 在Go编译器的代码优化阶段，会对其进行优化，直接返回false 并不是真正去比较了 可以通过 go run -gcflags="-N -l" server.go 不让他优化
 	a := new(struct{})
 	b := new(struct{})
 	println(a, b, a == b)
