@@ -12,6 +12,7 @@ require (
 	github.com/docker/libkv v0.2.1 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/wire v0.5.0
+	github.com/gorilla/securecookie v1.1.1 // indirect
 	github.com/hashicorp/go-hclog v1.1.0 // indirect
 	github.com/hashicorp/go.net v0.0.1 // indirect
 	github.com/hashicorp/serf v0.9.7 // indirect
